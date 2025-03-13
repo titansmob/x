@@ -52,7 +52,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
         }
         nav ul li {
             display: inline;
@@ -65,45 +65,32 @@
             transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #ff9800;
+            color: #e68900;
         }
         .card {
+            border-radius: 15px;
             background: rgba(255, 255, 255, 0.1);
             padding: 25px;
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
             color: #f8f9fa;
+            text-align: center;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
         footer {
             text-align: center;
             padding: 25px;
-            background: rgba(0, 0, 0, 0.3);
-        }
-        button {
-            background-color: #ff9800;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            transition: background 0.3s, transform 0.2s;
-        }
-        button:hover {
-            background-color: #e68900;
-            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/logo.jpeg" alt="TitansMob Logo">
+            <img src="logo.png" alt="TitansMob Logo">
         </div>
-        <h1 id="title">Welcome to TitansMob</h1>
+        <h1>Welcome to TitansMob</h1>
         <p>Your trusted network for freelance placement trainers, fostering collaboration and excellence.</p>
     </header>
     
@@ -119,29 +106,32 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card highlight-card">
-                    <h2>About TitansMob</h2>
-                    <p>TitansMob is a pioneering community dedicated to empowering freelance placement trainers in the technical field. We provide a platform that ensures quality training, fair compensation, and opportunities for growth.</p>
+                    <h2>About Us</h2>
+                    <p>This is a non-profit association dedicated to connecting educational institutions with highly qualified placement trainers. Our platform ensures direct communication between colleges and professional trainers without intermediaries or unknown third parties.</p>
+                    <p>Institutions can collaborate with experienced trainers to enhance student employability, ensuring high-quality training and guidance for successful placements.</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card highlight-card">
                     <h2>Our Vision</h2>
-                    <p>We believe in collective decision-making, equitable information sharing, and building a robust support system for trainers. Our focus is on quality-driven training methodologies that benefit both trainers and trainees alike.</p>
+                    <p>We strive to build a robust support system for trainers by offering opportunities for skill development, collaboration, and growth. Our primary focus is to promote quality-driven training methodologies that enhance learning experiences for students while ensuring fair compensation for trainers.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
     
-    <section id="contact" class="container mt-5">
-        <div class="card p-4">
-            <h2>Get in Touch</h2>
-            <p>Are you a passionate trainer looking to be a part of a thriving community? Connect with us today and take your career to the next level!</p>
-            <form>
-                <input type="text" placeholder="Your Name" class="form-control mb-3" required>
-                <input type="email" placeholder="Your Email" class="form-control mb-3" required>
-                <textarea placeholder="Your Message" class="form-control mb-3" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+    <section id="contact">
+        <div class="container mt-5">
+            <div class="card p-4">
+                <h2>Get in Touch</h2>
+                <p>Are you a passionate trainer looking to be a part of a thriving community? Connect with us today and take your career to the next level!</p>
+                <form>
+                    <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+                    <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+                    <textarea class="form-control mb-2" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
     
@@ -150,9 +140,9 @@
     </footer>
     
     <script>
-        gsap.from("#title", { duration: 1.5, opacity: 0, y: -50, ease: "bounce" });
-        gsap.from("nav ul li", { duration: 1, opacity: 0, y: -20, stagger: 0.3 });
-        gsap.from(".card", { duration: 1, opacity: 0, y: 50, stagger: 0.5 });
+        gsap.from(".logo-container", { duration: 1, opacity: 0, scale: 0.5 });
+        gsap.from("nav ul li", { duration: 1, opacity: 0, y: -20, stagger: 0.2 });
+        gsap.from(".card", { duration: 1, opacity: 0, y: 30, stagger: 0.3 });
     </script>
 </body>
 </html>
